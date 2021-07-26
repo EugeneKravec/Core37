@@ -118,5 +118,61 @@ console.log(arrFromString);
 const myArr = ['I', 'Love', 'JS'];
 console.log(myArr);
 
-let arrayToString = myArr.join('[');
+let arrayToString = myArr.join(' ');
 console.log(arrayToString);
+
+// indexOf() & includes()
+
+console.log('myArray', myArr);
+
+console.log('myString', myString);
+
+// ushift push
+// shift pop
+
+const exampleArray = [1, 1, 2, 3, 4, 4];
+console.log(exampleArray); // (6) [1, 1, 2, 3, 4, 4]
+
+const unshiftElement = exampleArray.unshift(0, 0);
+console.log(unshiftElement);
+console.log(exampleArray); // (8) [0, 0, 1, 1, 2, 3, 4, 4]
+
+const shiftElement = exampleArray.shift();
+console.log(shiftElement);
+console.log(exampleArray); // (7) [0, 1, 1, 2, 3, 4, 4]
+
+const pushElem = exampleArray.push(5, 5);
+console.log(pushElem);
+console.log(exampleArray); // (10) [0, 0, 1, 1, 2, 3, 4, 4, 5, 5]
+
+const popElem = exampleArray.pop();
+console.log(popElem);
+console.log(exampleArray); // (8) [0, 1, 1, 2, 3, 4, 4, 5]
+
+// splice() - Swiss knife
+
+let deleteSplice = exampleArray.splice(1, 1);
+console.log(deleteSplice); // [1]
+console.log(exampleArray); // (7) [0, 1, 2, 3, 4, 4, 5]
+
+let addSplice = exampleArray.splice(1, 0, 'I', 'Love', 'JS');
+console.log(addSplice); // [0]
+console.log(exampleArray); // (10) [0, "I", "Love", "JS", 1, 2, 3, 4, 4, 5]
+
+let replaceSplice = exampleArray.splice(7, 1, 'react', 'node.js');
+console.log(replaceSplice); // [4]
+console.log(exampleArray); // (11) [0, "I", "Love", "JS", 1, 2, 3, "react", "node.js", 4, 5]
+
+// concat()
+
+const firstPiece = [1, 2, 3];
+console.log(firstPiece);
+
+const secondPiece = [4, 5, 6];
+console.log(secondPiece);
+
+const thirdPiece = [7, 8, 9];
+console.log(thirdPiece);
+
+const fullPiece = secondPiece.concat(firstPiece, thirdPiece);
+console.log(fullPiece);
