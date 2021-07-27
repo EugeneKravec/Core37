@@ -1,2 +1,2 @@
 // import './js/arrays.js';
-import './js/function';
+import './js/functions.js';
