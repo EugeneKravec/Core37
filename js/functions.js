@@ -75,12 +75,97 @@ getArrayRes(4, 5, 6, 6, 34, 3);
 function getValues(array, value) {
   //   console.log(array);
   for (let i = 0; i < array.length; i += 1) {
-    console.log(`iteration-${i + 1}`);
+    // console.log(`iteration-${i + 1}`);
     if (array[i] === value) return `Значение ${value} есть в массиве`;
   }
   return `Значение ${value} !есть в массиве`;
 }
+let result = getValues([4, 6, 7, 3, 8, 4, 0, 2], 6);
+// console.log(result);
 
-console.log(getValues([4, 6, 7, 3, 8, 4, 0, 2], 6));
+result = getValues([4, 6, 7, 3, 8, 4, 0, 2], 5);
+// console.log(result);
 
-console.log(getValues([4, 6, 7, 3, 8, 4, 0, 2], 5));
+function getSpam(text, words) {
+  // console.log(text);
+  // console.log(words);
+  for (let word of words) {
+    // console.log(word);
+    if (text.includes(word)) return `SPAMM!!!`;
+  }
+  return text;
+}
+const arr = ['sapiente', 'dolor'];
+let value = `Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+Non, quam distinctio quae hic nemo placeat, amet
+        minima sapiente corrupti aliquam cupiditate velit quo reiciendis pariatur iste tempora voluptatem temporibus
+        suscipit?`;
+// console.log(getSpam(value, arr));
+
+// Arrow func & return
+
+// const getTotal = (a, b) => {
+//   return a + b;
+// };
+
+const getTotal = (a, b) => a + b; // неявный возврат
+console.log(getTotal(2, 5));
+
+const greet = user => `Hello ${user}`;
+console.log(greet('World'));
+
+//  Задачки =>
+
+function checkYear(year) {
+  let condition = year % 4 === 0;
+  if (condition) return `${year} высокосный`;
+  return `${year} не высокосный`;
+}
+console.log(checkYear(2021));
+
+// =>
+function game() {
+  let comp = Math.round(Math.random() * (10 - 1) + 1);
+  let user = prompt('Введите число от 1 до 10');
+  // console.log(comp, user);
+
+  if (comp == user) return `You win`;
+  return `You lose`;
+}
+// console.log(game());
+
+// =>
+
+function getMathResult() {
+  let num1 = prompt(`Enter first number`);
+  let num2 = prompt(`Enter second number`);
+  let symbol = prompt(`Enter symbol number`);
+
+  let total = 0;
+  console.log(num1, num2, symbol);
+
+  switch (symbol) {
+    case '+':
+      total = Number(num1) + Number(num2);
+      break;
+    case '-':
+      total = num1 - num2;
+      break;
+    case '*':
+      total = num1 * num2;
+      break;
+    case '/':
+      total = num1 / num2;
+      break;
+
+    default:
+      console.error('Error');
+  }
+
+  return total;
+}
+console.log('result', getMathResult());
+
+console.log(2 + 2 + '2');
+console.log(2 + '2' + '2');
+console.log('2' + 2 + 2);
