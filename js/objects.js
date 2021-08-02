@@ -172,9 +172,3 @@ const user = {
   },
 };
 console.log(user.showUserName());
-
-const bestUser = {
-  userName: 'Best User',
-};
-
-console.log();
