@@ -171,4 +171,12 @@ const user = {
     // заменяет имя обращения объекта по имени
   },
 };
-console.log(user.showUserName());
+// console.log(user.showUserName());
+
+function calculateMeanTemperature({
+  today: { low: todayLow, high: todayHigh },
+  tomorrow: { low: tomorrowLow, high: tomorrowHigh },
+}) {
+  // Change code above this line
+  return (todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4;
+}
