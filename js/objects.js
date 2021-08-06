@@ -180,3 +180,42 @@ function calculateMeanTemperature({
   // Change code above this line
   return (todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4;
 }
+// const number1 = 999;
+// let sun = 0;
+// for (let i = 0; i <= number1; i += 1) {
+//   if (i % 3 === 0 || i % 5 === 0) {
+//     sun = sun + i;
+//   }
+// }
+// console.log(sun);
+// const number1 = 100;
+// let firstNum = 0;
+// let secondNum =
+// // let fibonachiNum =
+// for (let i = 1; i <= number1; i += 1) {
+//   console.log(i);
+//   firstNum = firstNum + i;
+// }
+// console.log(firstNum);
+
+let firstNum = 1;
+let secondNum = 2;
+let fibonachiNum = 0;
+let sum = 2;
+
+while (true) {
+  // let fibonachiNum = array[array.length - 1] + array[array.length - 2];
+  fibonachiNum = firstNum + secondNum;
+
+  if (fibonachiNum > 4000000) {
+    break;
+  }
+  firstNum = secondNum;
+  secondNum = fibonachiNum;
+
+  if (fibonachiNum % 2 === 0) {
+    sum += fibonachiNum;
+  }
+}
+console.log(sum);
+console.log(fibonachiNum); // 4613732 4000001
