@@ -81,9 +81,36 @@ function getTotalPrice(arr) {
     // console.log(products[i]);
     totalPrice += products[i].price * products[i].quantity;
   }
-  console.log(totalPrice);
+  //   console.log(totalPrice);
 }
 // checkup ======
 getTotalPrice(products);
 
 // Task 4
+// создать функцию, кторая принимает масси продуктов,
+// название товара, его количество
+// и выводит его стоимость если товра достаточно или сообщает о том,
+// что товара нет на складе в указанном количестве.
+// Написать функцию тремя способами (Expression, Declaration & Arrow)
+
+const allProducts = [
+  { name: 'bread', price: 20, quantity: 100 },
+  { name: 'milk 2,5%', price: 30, quantity: 24 },
+  { name: 'cheese', price: 300, quantity: 10 },
+  { name: 'chorizzo', price: 560, quantity: 4 },
+  { name: 'lemon', price: 60, quantity: 9 },
+  { name: 'lavazza', price: 250, quantity: 24 },
+];
+console.log(allProducts);
+function getResponse(arr, prod, count) {
+  console.log(arr);
+  for (let product of arr) {
+    console.log(product.name);
+    //   проверяем
+    if (product.name === prod) {
+      console.log(`${prod} есть на складе`);
+    }
+  }
+}
+
+getResponse(allProducts, 'lavazza', 5);
