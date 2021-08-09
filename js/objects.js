@@ -198,24 +198,60 @@ function calculateMeanTemperature({
 // }
 // console.log(firstNum);
 
-let firstNum = 1;
-let secondNum = 2;
-let fibonachiNum = 0;
-let sum = 2;
+// let firstNum = 1;
+// let secondNum = 2;
+// let fibonachiNum = 0;
+// let sum = 2;
 
-while (true) {
-  // let fibonachiNum = array[array.length - 1] + array[array.length - 2];
-  fibonachiNum = firstNum + secondNum;
+// while (true) {
+//   // let fibonachiNum = array[array.length - 1] + array[array.length - 2];
+//   fibonachiNum = firstNum + secondNum;
 
-  if (fibonachiNum > 4000000) {
-    break;
-  }
-  firstNum = secondNum;
-  secondNum = fibonachiNum;
+//   if (fibonachiNum > 4000000) {
+//     break;
+//   }
+//   firstNum = secondNum;
+//   secondNum = fibonachiNum;
 
-  if (fibonachiNum % 2 === 0) {
-    sum += fibonachiNum;
-  }
+//   if (fibonachiNum % 2 === 0) {
+//     sum += fibonachiNum;
+//   }
+// }
+// console.log(sum);
+// console.log(fibonachiNum); // 4613732 4000001
+
+// .......задача с ядом
+
+// const atTheOldToad = {
+//   potions: [
+//     { name: 'Speed potion', price: 460 },
+//     { name: 'Dragon breath', price: 780 },
+//     { name: 'Stone skin', price: 520 },
+//   ],
+//   removePotion(potionName) {
+//     for (let po of this.potions) {
+//       console.log(po);
+//       let i = this.po.indexOf(potionName);
+//       if (potionName === po.name) {
+//         console.log(po.name);
+//         this.potions.splice(i, 1);
+//       }
+//     }
+//   },
+// };
+// console.log(atTheOldToad.removePotion('Dragon breath'));
+
+// console.log(atTheOldToad.potions);
+
+// Колбэк-функция
+function greet(yoyo) {
+  console.log(`Добро пожаловать ${yoyo}.`);
 }
-console.log(sum);
-console.log(fibonachiNum); // 4613732 4000001
+
+// Функция высшего порядка
+function registerGuest(you, greet) {
+  console.log(`Регистрируем гостя ${you}.`);
+  greet(you);
+}
+
+registerGuest('Eugene', greet);
