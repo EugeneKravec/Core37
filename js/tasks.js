@@ -109,6 +109,14 @@ function getResponse(arr, prod, count) {
     //   проверяем
     if (product.name === prod) {
       console.log(`${prod} есть на складе`);
+      if (product.quantity >= count) {
+        console.log(`${prod} можете купить`);
+        let cost = product.price * count
+      } else {
+        console.log(`${prod} нет в достаточном количестве`);
+      }
+    } else {
+      console.log(`${prod} нет такого товара на складе`);
     }
   }
 }
