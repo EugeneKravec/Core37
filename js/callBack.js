@@ -68,3 +68,50 @@ function getMinValue(arr) {
 }
 
 // Последовательность Фибоначи
+// ==============
+
+let firstNum = 100;
+const getF = (count, callback) => {
+  // local variable
+  let firstNum = 0;
+  let secondNum = 1;
+  const arrWithValues = [firstNum,secondNum]
+  // console.log(firstNum);
+  // Хочу получить массив с числами токой последовательности
+
+  for (let i = 3; i <= count; i++) {
+    let newNum = firstNum + secondNum
+    // console.log('newNum', newNum);
+    firstNum = secondNum
+    secondNum = newNum
+    arrWithValues.push(newNum)
+  }
+ 
+  
+  let result = callback(arrWithValues)
+
+  return result
+};
+// Вызов функции 
+
+console.log('Только четные',getF(18, getEvenValues));
+console.log('Сумма всех',getF(7, getSum));
+
+// callback 
+function getEvenValues(arr) {
+  const arrValues = []
+  for (let num of arr) {
+    if (num % 2 === 0) {
+      arrValues.push(num)
+    }
+  }
+  return arrValues
+}
+
+function getSum(arr) {
+  let total = 0
+  for (let i of arr) {
+    total +=i
+  }
+  return total
+}
