@@ -7,4 +7,5 @@
 // import './js/callBack.js';
 // import './js/stack.js';
 // import './js/closure.js';
-import './js/this.js';
+// import './js/this.js';
+import './js/constructors.js';
