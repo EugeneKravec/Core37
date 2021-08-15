@@ -100,3 +100,32 @@ console.log("title by getter:", baseProduct.title); // Good practice
 // Меняем значение через set
 baseProduct.title = 'Orange'
 console.log("title after setter:", baseProduct.title);
+
+
+// ============================================
+// Статические сво-ва и методы
+
+class Comment {
+    // записываются до метода конструктор
+    static name = 'anonim'
+    static showName() {
+        console.log(this.name);
+    }
+
+    constructor(author, text) {
+        this.author = author
+        this.text = text
+    }
+}
+
+const comment1 = new Comment('Pushkin', 'some text')
+console.log(comment1);
+console.log(comment1.author);
+console.log(comment1.text);
+
+// Вызываем статические сво-ва
+console.log(comment1.name); // undefined
+console.log(Comment.name);
+
+// comment1.showName() // comment1.showName is not a function
+Comment.showName()
