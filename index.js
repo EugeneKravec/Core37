@@ -8,4 +8,4 @@
 // import './js/stack.js';
 // import './js/closure.js';
 // import './js/this.js';
-import './js/constructors.js';
+import './js/constructorsPractice.js';
