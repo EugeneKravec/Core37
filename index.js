@@ -14,5 +14,8 @@
 // import './js/constructorsTheory.js';
 // import './js/constructorsPractice.js';
 
-import './js/classesTheory.js';
+// import './js/classesTheory.js';
 // import './js/classesPractice.js';
+
+
+import './mentor/practiceThree.js';
