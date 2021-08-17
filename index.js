@@ -18,4 +18,5 @@
 // import './js/classesPractice.js';
 
 
-import './mentor/practiceThree.js';
+// import './mentor/practiceThree.js';
+import './tasks/tasksFromSandara.js';
