@@ -17,6 +17,8 @@
 // import './js/classesTheory.js';
 // import './js/classesPractice.js';
 
+import './js/pureFunctions.js'
+
 
 // import './mentor/practiceThree.js';
-import './tasks/tasksFromSandara.js';
+// import './tasks/tasksFromSandara.js';
