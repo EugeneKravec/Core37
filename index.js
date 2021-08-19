@@ -17,7 +17,8 @@
 // import './js/classesTheory.js';
 // import './js/classesPractice.js';
 
-import './js/pureFunctions.js'
+// import './js/pureFunctions.js'
+import './js/methodsOfArr.js'
 
 
 // import './mentor/practiceThree.js';
