@@ -78,4 +78,20 @@ console.log('reduceResultnumber', reduceResultnumber);
 // ========================================
 
 // Цепочка методов 
-// Chaine of methods
+// Chain of methods
+
+const students = [
+    { name: 'Phill', age: 21, gender: 'male' },
+    { name: 'Margo', age: 27, gender: 'female' },
+    { name: 'Ann', age: 32, gender: 'female' },
+    { name: 'Edd', age: 41, gender: 'male' },
+    { name: 'Bill', age: 35, gender: 'male' },
+]
+
+const result = students
+    .filter((student) => student.gender === 'female')
+    .map((girl) => girl.name)
+    .sort()
+console.log('result-1', result);
+
+const result2 = students
