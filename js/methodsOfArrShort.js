@@ -95,3 +95,13 @@ const result = students
 console.log('result-1', result);
 
 const result2 = students
+    .map((student) => student.age)
+    .sort((a, b) => a - b)
+console.log('result2', result2);
+
+// ==== найти среднее значение из всех Reduce
+
+const result3 = students.reduce((acc, elem, i, arr) => {
+    console.log(acc += elem.age / arr.length);
+    return acc
+}, 0)
