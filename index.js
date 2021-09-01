@@ -19,8 +19,10 @@
 
 // import './js/pureFunctions.js'
 // import './js/methodsOfArr.js'
-import './js/methodsOfArrShort.js'
+// import './js/methodsOfArrShort.js'
 
 
 // import './mentor/practiceThree.js';
 // import './tasks/tasksFromSandara.js';
+
+import './js_DOM/DOM.js'
