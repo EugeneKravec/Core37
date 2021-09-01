@@ -138,24 +138,82 @@
 //  метод order должен возвращать результат вызова колбэка onSuccess, 
 //  передавая ему аргументом имя заказанной пиццы.
 
-const pizzaPalace = {
-  pizzas: ['Ультрасыр', 'Аль Копчино', 'Четыре нарезона'],
-  order(pizzaName, onSuccess, onError) { },
-};
-// Пиши код выше этой строки
+// const pizzaPalace = {
+//   pizzas: ['Ультрасыр', 'Аль Копчино', 'Четыре нарезона'],
+//   order(pizzaName, onSuccess, onError) { },
+// };
+// // Пиши код выше этой строки
 
-// Колбэк для onSuccess
-function makePizza(pizzaName) {
-  return `Ваш заказ принят. Готовим пиццу ${pizzaName}.`;
+// // Колбэк для onSuccess
+// function makePizza(pizzaName) {
+//   return `Ваш заказ принят. Готовим пиццу ${pizzaName}.`;
+// }
+
+// // Колбэк для onError
+// function onOrderError(error) {
+//   return `Ошибка! ${error}`;
+// }
+
+// // Вызовы метода с колбэками
+// pizzaPalace.order('Аль Копчино', makePizza, onOrderError);
+// pizzaPalace.order('Четыре нарезона', makePizza, onOrderError);
+// pizzaPalace.order('Биг майк', makePizza, onOrderError);
+// pizzaPalace.order('Венская', makePizza, onOrderError);
+
+// const getUsersWithFriend = (users, friendName) => {
+//   const flat = users.flatMap((elem) => elem.friends)
+//   const sort = flat.filter((elem, index, arr) => arr.indexOf(elem) === index)
+//   return sort
+// };
+// console.log(getUsersWithFriend);
+
+
+// REDUCE ========================================================= REDUCE
+
+// const total = [2, 7, 3, 14, 6].reduce((previousValue, number) => {
+//   return previousValue + number;
+// }, 0);
+
+// console.log(total); // 32
+
+// //  Вначале метод reduce() создаёт внутреннюю переменную - аккумулятор и
+// //  присваивает ей значение параметра initialValue или первого элемента
+// //  перебираемого массива, если initialValue не задан previousValue = 0
+
+// //  Далее коллбек - функция вызывается для каждого элемента массива.Текущее значение
+// //  параметра previousValue это то, что вернула коллбек - функция на прошлой итерации.
+
+// Итерация 1 -> previousValue = 0 -> number = 2 -> return 0 + 2 -> return 2
+// Итерация 2 -> previousValue = 2 -> number = 7 -> return 2 + 7 -> return 9
+// Итерация 3 -> previousValue = 9 -> number = 3 -> return 9 + 3 -> return 12
+// Итерация 4 -> previousValue = 12 -> number = 14 -> return 12 + 14 -> return 26
+// Итерация 5 -> previousValue = 26 -> number = 6 -> return 26 + 6 -> return 32
+
+// // После того как весь массив перебран, метод reduce() возвращает значение аккумулятора.
+// // Результат - 32
+
+
+console.log(getNamesSortedByFriendCount(users, 'male'));
+
+const likes = function (item) {
+    switch (item.length) {
+        case 'undefined':
+            `must be "no one likes this"`
+            break;
+        case 1:
+            `must be "${item[0]} likes this"`
+            break;
+        case 2:
+            `must be "${item[0]} and ${item[1]} like this"`
+            break;
+            break;
+        case 3:
+            `must be "${item[0]}, ${item[1]} and ${item[2]} like this"`
+            break;
+
+        default:
+            `must be "${item[0]}, ${item[1]} and 2 others like this"`
+            break;
+    }
 }
-
-// Колбэк для onError
-function onOrderError(error) {
-  return `Ошибка! ${error}`;
-}
-
-// Вызовы метода с колбэками
-pizzaPalace.order('Аль Копчино', makePizza, onOrderError);
-pizzaPalace.order('Четыре нарезона', makePizza, onOrderError);
-pizzaPalace.order('Биг майк', makePizza, onOrderError);
-pizzaPalace.order('Венская', makePizza, onOrderError);
+console.log(likes([]));

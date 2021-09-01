@@ -19,4 +19,5 @@
 
 
 // import './mentor/practiceThree.js';
-import './tasks/tasksFromSandara.js';
+// import './tasks/tasksFromSandara.js';
+import './tasks/tasks.js';
