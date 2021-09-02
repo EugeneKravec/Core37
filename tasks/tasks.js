@@ -502,7 +502,7 @@ const divEl = document.querySelector('.div')
 // console.dir(divEl.style.width);
 
 const onChangeW = () => {
-  // divEl.style.width = 
+    // divEl.style.width = 
 }
 const onChangeH = () => { }
 
