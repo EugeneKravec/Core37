@@ -2,7 +2,7 @@
 console.log(window);
 
 // 2. document
-console.dir(document);
+// console.dir(document);
 
 // узлы
 
@@ -35,12 +35,12 @@ const elemByParent = document.querySelector('body>h1')
 
 // Доступ ко всем наследникам
 const elemsByParent = document.querySelectorAll('body>h1')
-console.dir(elemsByParent); // NodeList - Кол-ция эл-тов с методом форЫч
+// console.dir(elemsByParent); // NodeList - Кол-ция эл-тов с методом форЫч
 
 // 6. По селектору потомка
 const elemByProto = document.querySelector('body p')
-// console.log(elemByProto);
-// console.dir(elemByProto);
+console.log(elemByProto);
+console.dir(elemByProto);
 
 
 

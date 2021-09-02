@@ -27,3 +27,5 @@
 // import './mentor/practiceThree.js';
 // import './tasks/tasksFromSandara.js';
 // import './tasks/tasks.js';
+
+import './js_DOM/DOM.js'
