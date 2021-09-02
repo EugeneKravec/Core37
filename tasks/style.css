@@ -1,0 +1,17 @@
+/* #gallery {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.image {
+  width: 350px;
+  height: auto;
+  margin: 10px;
+} */
+
+.div {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  background-color: brown;
+}
