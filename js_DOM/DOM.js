@@ -68,10 +68,10 @@ const elemsByProto = document.querySelectorAll('body p')
 
 
 
-// Узлы: узел-элемент (тег), узел комментарий и текстовый узел
+// Узлы: узел-элемент (тег), узел-комментарий и текстовый узел
 
 // Навигация
-console.log(titleByTeg.parentNode); // получаем родителя
+console.log(titleByTeg.parentNode); // получаем тег  родителя
 console.log(titleByTeg.childNodes); // NodeList + text
 console.log(titleByTeg.children); // HTMLCollection
 // сво-ва элемента
