@@ -127,7 +127,7 @@ console.log(button);
 // 2. `` - строчная разметка => string
 
 const stringBtn = `<button class="my-btn" type="button" data-type="my-button" style="background:green">click</button>`
-// console.log(stringBtn);
+console.log(stringBtn);
 
 // 3. Клонирование
 
@@ -152,6 +152,9 @@ titleByTeg.before(cloneButtonBefore) // строго перед элементо
 titleByTeg.appendChild(cloneButtonAppend)
 titleByTeg.prepend(cloneButtonPrepend)
 
+// 2. Для строк, созданных через шаблонную строку
+
+// titleByTeg.innerHTML = '' -  не рекомендуется использовать. затратно для браузера
 
 // удаление
 // ==========================
