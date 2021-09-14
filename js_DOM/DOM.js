@@ -126,7 +126,7 @@ console.log(button);
 
 // 2. `` - строчная разметка => string
 
-const stringBtn = `<button class="my-btn" type="button" data-type="my-button" style="background:green">click</button>`
+const stringBtn = `<button class="my-btn" type="button" data-type="my-button" style="background:red">click</button>`
 console.log(stringBtn);
 
 // 3. Клонирование
@@ -146,16 +146,34 @@ cloneButtonAppend.textContent = 'Append'
 // ВСТРАИВАНИЕ в HTML - 2 вида
 
 // 1. Для объектов, созданных через createElement
-titleByTeg.after(cloneButtonAfter) // строго после элемента
-titleByTeg.before(cloneButtonBefore) // строго перед элементом
+// titleByTeg.after(cloneButtonAfter) // строго после элемента
+// titleByTeg.before(cloneButtonBefore) // строго перед элементом
 
-titleByTeg.appendChild(cloneButtonAppend)
-titleByTeg.prepend(cloneButtonPrepend)
+// titleByTeg.appendChild(cloneButtonAppend)
+// titleByTeg.prepend(cloneButtonPrepend)
+// ===========================================
+titleByTeg.insertAdjacentElement('beforebegin', cloneButtonBefore)
+titleByTeg.insertAdjacentElement('afterbegin', cloneButtonPrepend)
+titleByTeg.insertAdjacentElement('afterend', cloneButtonAfter)
+titleByTeg.insertAdjacentElement('beforeend', cloneButtonAppend)
+// ===========================================
 
 // 2. Для строк, созданных через шаблонную строку
 
+titleByTeg.insertAdjacentHTML('beforebegin', stringBtn)
+titleByTeg.insertAdjacentHTML('afterbegin', stringBtn)
+titleByTeg.insertAdjacentHTML('afterend', stringBtn)
+titleByTeg.insertAdjacentHTML('beforeend', stringBtn)
+
+// ====================================================
+
+// Удаление элементов
 // titleByTeg.innerHTML = '' -  не рекомендуется использовать. затратно для браузера
 
-// удаление
-// ==========================
+// titleByTeg.removeChild(cloneButtonBefore) // нельзя удалить, птому что не вложенный элемент
+// titleByTeg.removeChild(cloneButtonAfter) // нельзя удалить, птому что не вложенный элемент
+titleByTeg.removeChild(cloneButtonPrepend)
+titleByTeg.removeChild(cloneButtonAppend)
 
+cloneButtonBefore.remove()
+cloneButtonAfter.remove()
