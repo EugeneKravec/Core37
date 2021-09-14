@@ -28,4 +28,5 @@
 // import './tasks/tasksFromSandara.js';
 // import './tasks/tasks.js';
 
-import './js_DOM/DOM.js'
+// import './js_DOM/DOM.js'
+import './js_DOM/addEvent.js'
