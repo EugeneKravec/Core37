@@ -27,4 +27,17 @@ console.log(form);
 form.addEventListener('submit', (event) => {
     event.preventDefault() // Оставливаем дефолтную отправку формы
     console.log('отправка формы произошла', event);
+    console.log(event.target.children.firstInput.value);
+    console.log(event.target.children.secondInput.value);
+
+    console.log(event.target.elements.firstInput.value);
+    console.log(event.target.elements.secondInput.value);
+})
+
+// form.addEventListener('input', (evt) => {
+//     console.log(evt);
+// })
+
+form.addEventListener('change', (e) => {
+    console.log(e);
 })
