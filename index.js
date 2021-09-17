@@ -29,4 +29,5 @@
 // import './tasks/tasks.js';
 
 // import './js_DOM/DOM.js'
-import './js_DOM/addEvent.js'
+// import './js_DOM/addEvent.js'
+import './js_DOM/propagation.js'
