@@ -31,5 +31,6 @@
 // import './js_DOM/DOM.js'
 // import './js_DOM/addEvent.js'
 // import './js_DOM/propagation.js'
-import './js_DOM/throttle.js'
+// import './js_DOM/throttle.js'
 // import './js_DOM/debounce.js'
+import './js_DOM/intersectionObserver.js'

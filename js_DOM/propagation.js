@@ -1,11 +1,12 @@
-const refs = {
-    propagation: document.querySelector('.propagation'),
-    articleProp: document.getElementById('article-prop'),
-    articleList: document.getElementById('article-list'),
-}
+// const refs = {
+//     propagation: document.querySelector('.propagation'),
+//     articleProp: document.getElementById('article-prop'),
+//     articleList: document.getElementById('article-list'),
+// }
 
+import { refs } from "../references/refs.js";
 const { propagation, articleProp, articleList } = refs
-
+console.log(refs);
 // EVENT Propagation - распространение событий
 
 // Capture - погружение / затопление.
