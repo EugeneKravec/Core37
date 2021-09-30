@@ -33,4 +33,6 @@
 // import './js_DOM/propagation.js'
 // import './js_DOM/throttle.js'
 // import './js_DOM/debounce.js'
-import './js_DOM/intersectionObserver.js'
+// import './js_DOM/intersectionObserver.js'
+
+import './JSON/json.js'
