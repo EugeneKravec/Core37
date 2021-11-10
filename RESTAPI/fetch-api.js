@@ -1,5 +1,5 @@
-
-import { pokemonCardTpl } from "../RESTAPI/pokemon-card.hbs";
+import pokemonCardTpl from 'handlebars'
+// import {  pokemonCardTpl } from "../RESTAPI/pokemon-card.hbs";
 
 const pokemon = fetch('https://pokeapi.co/api/v2/pokemon/2')
     .then(response => {
