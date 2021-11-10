@@ -1,15 +1,17 @@
-import pokemonCardTpl from 'handlebars'
-// import {  pokemonCardTpl } from "../RESTAPI/pokemon-card.hbs";
+// import templateCard from './cards.hbs'
 
-const pokemon = fetch('https://pokeapi.co/api/v2/pokemon/2')
+const ghjy = fetch('https://pokeapi.co/api/v2/pokemon/2')
     .then(response => {
-        return response.json();
+        console.log(response);
+        return response;
     })
     .then(pokemon => {
         console.log(pokemon);
-        const markup = pokemonCardTpl(pokemon)
-        console.log(markup);
+        const markup = templateCard(pokemon)
+        return markup
+        // console.log(markup);
     })
     .catch(error => {
         console.log(error);
     });
+console.log(ghjy);
